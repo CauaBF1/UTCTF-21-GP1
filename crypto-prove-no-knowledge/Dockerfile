@@ -20,7 +20,7 @@ WORKDIR ./$BIN_NAME
 COPY ./Cargo.toml ./Cargo.toml
 
 RUN $HOME/.cargo/bin/cargo build --release \
-	&& rm ./target/release/deps/$BIN_NAME* src/*.rs
+	&& rm -f ./target/release/deps/$BIN_NAME* src/*.rs
 #RUN $HOME/.cargo/bin/cargo build \
 #	&& rm ./target/debug/deps/$BIN_NAME* src/*.rs
 
